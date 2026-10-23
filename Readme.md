@@ -10,7 +10,7 @@ Uma solução integrada para gestão de eventos, credenciação digital/física,
 
 ## 📌 Funcionalidades Principais
 
-### 1. 🖥️ Gestão e Inscrição (Painel Web)
+### 1. Gestão e Inscrição (Painel Web)
 * **Criação de Eventos (Administração / Associação / Professores):**
   * Suporte para palestras, torneios, workshops ou exibições.
   * Configuração de data, janela horária (início/fim), local e lotação máxima opcional.
@@ -21,13 +21,13 @@ Uma solução integrada para gestão de eventos, credenciação digital/física,
 
 ---
 
-### 2. 🎟️ Geração e Distribuição de Credenciais
+### 2. Geração e Distribuição de Credenciais
 * **QR Code Dinâmico:** Geração automática de um QR Code único e encriptado (*hash* com *timestamp*) enviado por e-mail e disponibilizado na área pessoal do aluno.
 * **Integração com Cartão Escolar:** Compatibilidade com o cartão físico da escola (NFC / RFID / Código de Barras), associado ao número do aluno.
 
 ---
 
-### 3. 🚪 Check-in e Validação na Entrada (Ponto de Acesso)
+### 3. Check-in e Validação na Entrada (Ponto de Acesso)
 Validação instantânea no terminal de leitura com feedback audiovisual e atualização de estado na base de dados:
 
 * 🟢 **Sinal Verde + Apito Suave (Entrada Autorizada):**
@@ -40,7 +40,7 @@ Validação instantânea no terminal de leitura com feedback audiovisual e atual
 
 ---
 
-### 4. 📊 Painel do Professor em Tempo Real
+### 4. Painel do Professor em Tempo Real
 Acompanhamento contínuo da assiduidade da turma via WebSockets/Socket.io durante o período letivo:
 
 * **Métricas em Tempo Real:**
@@ -52,7 +52,7 @@ Acompanhamento contínuo da assiduidade da turma via WebSockets/Socket.io durant
 
 ---
 
-### 5. 📜 Módulo Final: Emissão de Certificados
+### 5. Módulo Final: Emissão de Certificados
 * **Geração Automática:** Disponibilização automática do certificado em PDF para download aos alunos com estado de presença confirmado (`Utilizado`).
 * **Conteúdo do Certificado:** Nome do formando, título do evento, carga horária, data e assinatura digital/logótipo da instituição.
 
