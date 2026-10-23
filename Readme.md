@@ -1,55 +1,60 @@
-1. Gestão e Inscrição (Painel Web)
-Criação de Eventos (Administração / Associação / Professores):
+# 🎓 Plataforma de Gestão de Eventos Escolares & Controlo de Acessos
 
-Criação de palestras, torneios, workshops ou exibições.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Node.js](https://img.shields.io/badge/Node.js-v18+-green.svg)](https://nodejs.org/)
+[![WebSockets](https://img.shields.io/badge/Realtime-Socket.io-blue.svg)](https://socket.io/)
 
-Definição de data, horário de início/fim, local e lotação máxima (opcional).
+Uma solução integrada para gestão de eventos, credenciação digital/física, controlo de acessos em tempo real e emissão automatizada de certificados no meio escolar.
 
-Ativação/desativação da opção de Emissão de Certificado de Presença.
+---
 
-Modalidades de Inscrição:
+## 📌 Funcionalidades Principais
 
-Por Turma: Um professor pode inscrever a sua turma inteira num evento que decorra durante o seu bloco de aulas. O sistema valida automaticamente se algum aluno já está inscrito para evitar duplicados.
+### 1. 🖥️ Gestão e Inscrição (Painel Web)
+* **Criação de Eventos (Administração / Associação / Professores):**
+  * Suporte para palestras, torneios, workshops ou exibições.
+  * Configuração de data, janela horária (início/fim), local e lotação máxima opcional.
+  * Ativação ou desativação parametrizável da emissão de certificados.
+* **Modalidades de Inscrição:**
+  * **Por Turma:** O docente inscreve a turma inteira no bloco de aulas correspondente. O sistema efetua uma validação automática para evitar inscrições duplicadas.
+  * **Individual:** Inscrição direta pelo próprio aluno através da plataforma Web ou App.
 
-Individual: O próprio aluno pode inscrever-se diretamente através da web/app.
+---
 
-2. Geração e Distribuição de Credenciais (Web / App / Cartão)
-QR Code Dinâmico: Assim que a inscrição é confirmada, é gerado um QR Code único e encriptado (hash com timestamp) enviado por e-mail e disponibilizado na área pessoal/app do aluno.
+### 2. 🎟️ Geração e Distribuição de Credenciais
+* **QR Code Dinâmico:** Geração automática de um QR Code único e encriptado (*hash* com *timestamp*) enviado por e-mail e disponibilizado na área pessoal do aluno.
+* **Integração com Cartão Escolar:** Compatibilidade com o cartão físico da escola (NFC / RFID / Código de Barras), associado ao número do aluno.
 
-Integração com Cartão da Escola (NFC / RFID / Barcode): O aluno pode optar por usar o seu cartão físico da escola, associado ao seu número de aluno na base de dados.
+---
 
-3. Check-in e Validação na Entrada (Ponto de Acesso / Leitor)
-À entrada do auditório/espaço, o leitor (QR Code ou Cartão da Escola) faz a validação instantânea no ecrã com feedback visual e sonoro:
+### 3. 🚪 Check-in e Validação na Entrada (Ponto de Acesso)
+Validação instantânea no terminal de leitura com feedback audiovisual e atualização de estado na base de dados:
 
-Sinal Verde + Apito Suave (Entrada Autorizada):
+* 🟢 **Sinal Verde + Apito Suave (Entrada Autorizada):**
+  * **Mensagem no Ecrã:** `Entrada Autorizada - [Nome do Aluno] ([Turma])`
+  * Registo do *timestamp* de entrada e alteração do bilhete para o estado `Utilizado`.
+* 🔴 **Sinal Vermelho + Apito de Erro (Entrada Recusada):**
+  * **Credencial Reutilizada:** `Acesso Negado: Bilhete já validado às [Hora]`
+  * **Ausência de Inscrição:** `Acesso Negado: Aluno não inscrito neste evento`
+  * **Fora de Horário:** `Acesso Negado: Evento fora do horário de acesso ou encerrado`
 
-Ecrã: "Entrada Autorizada - [Nome do Aluno] ([Turma])"
+---
 
-O sistema regista a hora exata de entrada e altera o estado do bilhete para "Utilizado".
+### 4. 📊 Painel do Professor em Tempo Real
+Acompanhamento contínuo da assiduidade da turma via WebSockets/Socket.io durante o período letivo:
 
-Sinal Vermelho + Apito de Erro (Entrada Recusada):
+* **Métricas em Tempo Real:**
+  * 🟩 **Presentes (Verdes):** Alunos que efetuaram check-in no ponto de acesso.
+  * 🟥 **Ausentes (Vermelhos):** Alunos inscritos que ainda não passaram no leitor.
+* **Ações de Controlo:**
+  * **Registo Manual:** Permite ao professor assinalar manualmente a presença em situações excecionais (ex.: esquecimento do cartão/telemóvel).
+  * **Exportação de Dados:** Exportação das presenças e faltas em PDF ou Excel para sincronização com a caderneta escolar.
 
-QR Code ou Cartão já Utilizado: "Acesso Negado: Bilhete já validado às [Hora de Entrada]"
+---
 
-Aluno Não Inscrito: "Acesso Negado: Aluno não inscrito neste evento"
+### 5. 📜 Módulo Final: Emissão de Certificados
+* **Geração Automática:** Disponibilização automática do certificado em PDF para download aos alunos com estado de presença confirmado (`Utilizado`).
+* **Conteúdo do Certificado:** Nome do formando, título do evento, carga horária, data e assinatura digital/logótipo da instituição.
 
-Fora de Horário: "Acesso Negado: Evento fora do horário de acesso ou já encerrado"
-
-4. Painel do Professor em Tempo Real (Web / App)
-O professor acompanha em tempo real a comparência da sua turma durante o seu bloco de aulas:
-
-Métricas em Tempo Real (WebSockets / Socket.io):
-
-Verdes (Presentes): Alunos que já passaram no leitor e estão na sala.
-
-Vermelhos / Alertas (Ausentes): Alunos da turma inscritos que ainda não fizeram check-in.
-
-Ações de Controlo:
-
-Marcador Manual: O professor pode marcar presença manualmente caso o aluno tenha esquecido o cartão/telemóvel.
-
-Exportação de Faltas: Geração de ficheiro (PDF/Excel) com o registo de presenças/faltas para integração com a caderneta escolar.
-
-5. Módulo Final: Emissão de Certificados
-Geração Automática: Se o evento tiver a opção de certificado ativa, o sistema disponibiliza o PDF para download aos alunos cujo bilhete esteja marcado como "Utilizado".
+---
 
