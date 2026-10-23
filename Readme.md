@@ -1,7 +1,4 @@
-# 🎓 Plataforma de Gestão de Eventos Escolares & Controlo de Acessos
----
-
-## 📌 Funcionalidades Principais
+# Gestão de Eventos Escolares & Controlo de Acessos
 
 ### 1. Gestão e Inscrição (Painel Web)
 * **Criação de Eventos (Administração / Associação / Professores):**
