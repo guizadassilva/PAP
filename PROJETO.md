@@ -1,4 +1,4 @@
-# Gestão de Eventos Escolares & Controlo de Acessos
+# Gestão de Eventos Escolares & Controlo de Acessos & Catina
 
 ### 1. Gestão e Inscrição (Painel Web)
 * **Criação de Eventos (Administração / Associação / Professores):**
