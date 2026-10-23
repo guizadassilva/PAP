@@ -3,7 +3,7 @@
 
 ## 📌 Funcionalidades Principais
 
- 1. Gestão e Inscrição (Painel Web)
+### 1. Gestão e Inscrição (Painel Web)
 * **Criação de Eventos (Administração / Associação / Professores):**
   * Suporte para palestras, torneios ou exibições.
   * Configuração de data, janela horária (início/fim), local e lotação máxima opcional.
@@ -33,15 +33,14 @@ Validação instantânea no terminal de leitura com feedback audiovisual e atual
 ---
 
 ### 4. Painel do Professor em Tempo Real
-Acompanhamento contínuo da assiduidade da turma via WebSockets/Socket.io durante o período letivo:
+Acompanhamento contínuo da assiduidade da turma :
 
 * **Métricas em Tempo Real:**
   * 🟩 **Presentes (Verdes):** Alunos que efetuaram check-in no ponto de acesso.
   * 🟥 **Ausentes (Vermelhos):** Alunos inscritos que ainda não passaram no leitor.
 * **Ações de Controlo:**
-  * **Registo Manual:** Permite ao professor assinalar manualmente a presença em situações excecionais (ex.: esquecimento do cartão/telemóvel).
-  * **Exportação de Dados:** Exportação das presenças e faltas em PDF ou Excel para sincronização com a caderneta escolar.
-
+  * **Inovar:** Integrar com a plataforma inovar para marcar as faltas automaticamente.
+    
 ---
 
 ### 5. Módulo Final: Emissão de Certificados
