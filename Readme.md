@@ -12,18 +12,17 @@ Uma solução integrada para gestão de eventos, credenciação digital/física,
 
 ### 1. Gestão e Inscrição (Painel Web)
 * **Criação de Eventos (Administração / Associação / Professores):**
-  * Suporte para palestras, torneios, workshops ou exibições.
+  * Suporte para palestras, torneios ou exibições.
   * Configuração de data, janela horária (início/fim), local e lotação máxima opcional.
   * Ativação ou desativação parametrizável da emissão de certificados.
 * **Modalidades de Inscrição:**
-  * **Por Turma:** O docente inscreve a turma inteira no bloco de aulas correspondente. O sistema efetua uma validação automática para evitar inscrições duplicadas.
-  * **Individual:** Inscrição direta pelo próprio aluno através da plataforma Web ou App.
+  * **Por Turma:** O professor inscreve a turma inteira no bloco de aulas correspondente.
 
 ---
 
 ### 2. Geração e Distribuição de Credenciais
-* **QR Code Dinâmico:** Geração automática de um QR Code único e encriptado (*hash* com *timestamp*) enviado por e-mail e disponibilizado na área pessoal do aluno.
-* **Integração com Cartão Escolar:** Compatibilidade com o cartão físico da escola (NFC / RFID / Código de Barras), associado ao número do aluno.
+* **QR Code Dinâmico:** Geração automática de um QR Code único enviado por e-mail e disponibilizado na área pessoal do aluno.
+* **Integração com Cartão Escolar:** Compatibilidade com o cartão físico da escola , associado ao número do aluno.
 
 ---
 
@@ -54,7 +53,6 @@ Acompanhamento contínuo da assiduidade da turma via WebSockets/Socket.io durant
 
 ### 5. Módulo Final: Emissão de Certificados
 * **Geração Automática:** Disponibilização automática do certificado em PDF para download aos alunos com estado de presença confirmado (`Utilizado`).
-* **Conteúdo do Certificado:** Nome do formando, título do evento, carga horária, data e assinatura digital/logótipo da instituição.
-
+  
 ---
 
