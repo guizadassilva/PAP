@@ -1,16 +1,9 @@
 # 🎓 Plataforma de Gestão de Eventos Escolares & Controlo de Acessos
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Node.js](https://img.shields.io/badge/Node.js-v18+-green.svg)](https://nodejs.org/)
-[![WebSockets](https://img.shields.io/badge/Realtime-Socket.io-blue.svg)](https://socket.io/)
-
-Uma solução integrada para gestão de eventos, credenciação digital/física, controlo de acessos em tempo real e emissão automatizada de certificados no meio escolar.
-
 ---
 
 ## 📌 Funcionalidades Principais
 
-### 1. Gestão e Inscrição (Painel Web)
+ 1. Gestão e Inscrição (Painel Web)
 * **Criação de Eventos (Administração / Associação / Professores):**
   * Suporte para palestras, torneios ou exibições.
   * Configuração de data, janela horária (início/fim), local e lotação máxima opcional.
